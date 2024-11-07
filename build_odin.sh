@@ -153,7 +153,7 @@ build_odin() {
 
 run_demo() {
 	if [ $# -eq 0 ] || [ "$1" = "debug" ]; then
-		./odin run examples/demo -vet -strict-style -- Hellope World
+		./odin run examples/demo -vet -strict-style -minimum-os-version=$(sw_vers -productVersion) -- Hellope World
 	fi
 }
 
